@@ -1,0 +1,27 @@
+extends layout
+
+block content
+    h1=title
+
+    if errors
+        each error, i in errors
+            div #{error.msg}
+
+    if msg
+        div #{msg} 
+
+    form(action="", method="post")
+        div
+            |username 
+            input(type="text" name="username")
+        p
+        div
+            |password 
+            input(type="password" name="password")
+        p
+        div
+            button(type="submit", style="margin-right:20px;") Login
+            a(href="/register") Register
+        div
+            p
+            a(href="/auth/google") Login with google

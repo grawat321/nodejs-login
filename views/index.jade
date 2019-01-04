@@ -1,0 +1,31 @@
+extends layout
+
+- if (messages.info)
+    span= messages.info
+    
+block content
+
+  h1= title
+  p Welcome #{user.username}
+  div
+    img(src="#{user.photo}", alt="profile")
+
+  table
+    tr
+      td Username
+      td Email
+      td Age
+      td Action
+
+    each val in data
+      tr
+        td #{val.username}
+        td #{val.email}
+        td #{val.age}
+        td
+          a(href="/update/#{val.id}") edit 
+          | /   
+          a(href="/delete/#{val.id}") delete
+
+  a(href="/logout") 
+    button Logout

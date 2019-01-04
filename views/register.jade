@@ -1,0 +1,36 @@
+extends layout
+
+block content
+    h1=title
+
+    if errors
+        each error, i in errors
+            div #{error.msg}
+            
+    form(action="", method="post" enctype="multipart/form-data")
+        div
+            |Username 
+            input(type="text" name="username")
+        p
+        div
+            |Email 
+            input(type="text" name="email")
+        p
+        div
+            |Age 
+            input(type="number" name="age")
+        p
+        div
+            |Password 
+            input(type="password" name="password")
+        p
+        div
+            |Password 
+            input(type="password" name="cpassword")
+        p
+        div
+            |Profile Picture 
+            input(type="file" name="photo")
+        p
+        div
+            button(type="submit", style="margin-right:20px;") Register

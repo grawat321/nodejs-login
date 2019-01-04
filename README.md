@@ -7,9 +7,7 @@ A web application built with NodeJS, express framework and google oauth to let u
 
 Configure the keys.js in config folder.
 
-Start the project using two terminals and type.
-mongod
-npm start
+Start the project using two terminals and type => mongod, npm start in each.
 
 Open localhost port no. 3000 in your web browser. Your application will start.
 
